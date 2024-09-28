@@ -3,6 +3,7 @@ import NextTopLoader from 'nextjs-toploader';
 
 import { APP_DESCRIPTION, APP_NAME, APP_URL } from '@/constants/meta';
 import Providers from '@/app/providers';
+import '@/styles/globals.css';
 
 import type { Metadata } from 'next';
 
@@ -43,10 +44,17 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+
       <body className={font.className}>
+        
         <NextTopLoader color="#3182CE" showSpinner={false} />
         <Providers>{children}</Providers>
+      
+
+
+
       </body>
+
     </html>
   );
 };

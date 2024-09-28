@@ -65,23 +65,41 @@ export function ProductListClient({ initialProducts }: ProductListClientProps) {
   };
 
   return (
-    <Layout>
+    <Layout
+    
+    >
+   
          <SearchBar onSearch={handleSearch} />
          <Flex direction="column" alignItems="center" gap={4} marginTop={8}> 
             <Button leftIcon={<FaFilter />} colorScheme="purple" display={{ md: 'none' }}  onClick={onOpen}>
               Filters
             </Button>
             </Flex>
-      <Container maxW="container.xl" py={8}>
+
+
+        
+      
+      
+      <Container maxW="container.xl" py={8} backgroundImage=
+                "url('https://png.pngtree.com/png-vector/20230512/ourmid/pngtree-playful-monochrome-doodle-pattern-with-adorable-childlike-illustrations-whimsical-line-art-background-perfect-for-kids-vector-png-image_52038374.jpg')">
         <VStack spacing={8} align="stretch">
           <Flex direction={{ base: 'column', md: 'row' }} gap={8}>
-            <Box display={{ base: 'none', md: 'block' }} w="250px">
-              <FilterSection
-                onPriceChange={handlePriceChange}
-                onTagChange={handleTagChange}
-                onColorChange={handleColorChange}
-              />
-            </Box>
+          <Box
+            display={{ base: 'none', md: 'block' }}
+            w="250px"
+            backgroundColor="white"
+            position="sticky"
+            top="80px" // Adjust this to ensure it sticks below your header if necessary
+            height="80vh" // Adjust height to control its size
+            overflowY="auto" // This ensures the content inside scrolls if it's too long
+          >
+            <FilterSection
+              onPriceChange={handlePriceChange}
+              onTagChange={handleTagChange}
+              onColorChange={handleColorChange}
+            />
+          </Box>
+
             <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} flex={1}>
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -90,6 +108,7 @@ export function ProductListClient({ initialProducts }: ProductListClientProps) {
           </Flex>
         </VStack>
       </Container>
+
 
       {/* Mobile Filter Drawer */}
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -106,6 +125,7 @@ export function ProductListClient({ initialProducts }: ProductListClientProps) {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      
     </Layout>
   );
 }

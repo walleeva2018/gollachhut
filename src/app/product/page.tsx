@@ -1,7 +1,5 @@
-import { ProductListClient } from '../components/ProductListClient';
-import { Product } from '../types/productTypes';
-import { Layout } from '@/components/layouts';
-
+import { ProductListClient } from '../../components/ProductListClient';
+import { Product } from '../../types/productTypes';
 
 async function getProducts(): Promise<Product[]> {
   // In a real application, this would be an API call or database query
@@ -15,10 +13,7 @@ async function getProducts(): Promise<Product[]> {
     { id: 7, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
     { id: 8, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
     { id: 9, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 10, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 11, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 12, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 13, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
+    
     // Add more products...
   ];
 }
@@ -26,11 +21,5 @@ async function getProducts(): Promise<Product[]> {
 export default async function ProductListPage() {
   const initialProducts = await getProducts();
 
-
-  return <>
-<Layout>
-  <div>Hello</div>
-</Layout>
- 
-  </> 
+  return <ProductListClient initialProducts={initialProducts}  />;
 }

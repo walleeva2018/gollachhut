@@ -31,7 +31,7 @@ export const FilterSection = ({
   };
 
   return (
-    <VStack align="stretch" spacing={4}>
+    <VStack align="stretch" spacing={4} m={4}>
       <Text fontWeight="bold" fontSize="xl" color="purple.500">Fun Filters</Text>
 
       <Box>

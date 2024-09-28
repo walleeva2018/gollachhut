@@ -1,4 +1,4 @@
-import { Box, Container, IconButton, Image } from '@chakra-ui/react';
+import { Box, Button, Container, IconButton, Image } from '@chakra-ui/react';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import Link from 'next/link'; // Import the Next.js Link component
 
@@ -8,8 +8,9 @@ const Header = () => {
       as="header"
       width="full"
       height={70}
-      backgroundImage="url('/images/flowery-bg.jpeg')"
       backgroundSize="cover"
+      backgroundImage=
+                "url('https://i.ytimg.com/vi/wuUSVEcK-kM/maxresdefault.jpg')"
       backgroundPosition="center"
       backgroundColor={'rgba(237, 242, 247, 0.8)'}
       backdropFilter="blur(10px)"
@@ -39,8 +40,17 @@ const Header = () => {
           </Link>
         </Box>
 
-        {/* Cart Icon */}
+        {/* Explore Products Button */}
         <Box display="flex" alignItems="center">
+          <Link href="/product" passHref>
+            <Button variant="solid" colorScheme="purple" cursor="pointer">
+              Explore Products
+            </Button>
+          </Link>
+        </Box>
+
+        {/* Cart Icon */}
+        <Box display="flex" alignItems="center" background={'white'}>
           <IconButton
             aria-label="Cart"
             icon={<RiShoppingCartLine />}

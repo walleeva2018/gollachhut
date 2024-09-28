@@ -1,7 +1,10 @@
 import { ProductListClient } from '../components/ProductListClient';
 import { Product } from '../types/productTypes';
 import { Layout } from '@/components/layouts';
-
+import HeroItem from '../components/landing/HeroItem.jsx'
+import TrustedComponent from '../components/landing/TrustedComponent'
+import OfferComponent from '../components/landing/OfferComponent'
+import NewArrival from '@/components/landing/NewArrival';
 
 async function getProducts(): Promise<Product[]> {
   // In a real application, this would be an API call or database query
@@ -15,10 +18,7 @@ async function getProducts(): Promise<Product[]> {
     { id: 7, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
     { id: 8, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
     { id: 9, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 10, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 11, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 12, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
-    { id: 13, name: 'Cool Gadget 2', price: 29.99, image: '/images/car.jpg', tags: ['electronic'], color: 'red' },
+
     // Add more products...
   ];
 }
@@ -29,7 +29,11 @@ export default async function ProductListPage() {
 
   return <>
 <Layout>
-  <div>Hello</div>
+    <HeroItem/>
+    <TrustedComponent />
+    <NewArrival  />
+    <OfferComponent />
+    
 </Layout>
  
   </> 

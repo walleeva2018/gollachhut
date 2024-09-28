@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-*{
-    margin: 0px;
-    padding: 0px;
-}
+
 
 body{
     font-family: 'Exo', sans-serif;
@@ -17,11 +14,7 @@ body{
     
 }
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
+
 
 
 .area{
@@ -147,3 +140,4 @@ body{
     }
 
 }
+

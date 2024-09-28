@@ -15,7 +15,7 @@ const Offers = () => {
             margin={4}
             bgClip="text"  // This clips the background gradient to text
           >
-            Our Services
+            Our Offers
           </Heading>
 
       {/* Box 1 */}

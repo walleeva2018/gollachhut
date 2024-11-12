@@ -19,6 +19,7 @@ import {
 import { FiShoppingBag, FiTrash2, FiPlus, FiMinus } from 'react-icons/fi';
 import { Product } from '@/types/productTypes';
 import { Layout } from '@/components/layouts';
+import Link from 'next/link';
 
 interface OrderProps {
   products: Product[];
@@ -148,8 +149,21 @@ export default function CartList({ products, totalPrice }: OrderProps) {
               <Text fontSize="lg" fontWeight="semibold">Total Amount:</Text>
               <Text fontSize="xl" fontWeight="bold" color="#6B46C1">
                 ${calculateTotalPrice().toFixed(2)}
+               
               </Text>
+              
             </Grid>
+            <Link
+                href={'/order'}
+            >
+                <Button
+                    backgroundColor={'#6B46C1'}
+                    textColor={'white'}
+                >
+                         Confirm Order
+                </Button>
+                       
+            </Link>
           </Box>
         </Box>
       </Box>

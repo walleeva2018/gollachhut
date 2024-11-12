@@ -52,6 +52,7 @@ const Header = () => {
         </Box>
 
         {/* Cart Icon */}
+        <Link href="/mycart" passHref>
         <Box
       display="flex"
       alignItems="center"
@@ -73,6 +74,7 @@ const Header = () => {
         {itemCount}
       </Badge>
     </Box>
+    </Link>
       </Container>
     </Box>
   );

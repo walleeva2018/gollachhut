@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/offers.css'; // Assuming you're storing styles in a separate CSS file
 import { Heading , VStack} from '@chakra-ui/react';
+import Link from 'next/link';
 
 const Offers = () => {
   return (
@@ -19,6 +20,7 @@ const Offers = () => {
       </VStack>
 
       {/* Box 1 */}
+     
       <div className="box">
         <div className="row">
           <span>
@@ -55,9 +57,10 @@ const Offers = () => {
           <span>Live Playing Man</span>
         </div>
         <div className="row">
-          <a href="#">Order Now</a>
+        <Link href="/order" passHref>Order Now</Link>
         </div>
       </div>
+      
 
       {/* Box 2 */}
       <div className="box">
@@ -96,7 +99,7 @@ const Offers = () => {
           <span>Live Playing Man</span>
         </div>
         <div className="row">
-          <a href="#">Order Now</a>
+        <Link href="/order" passHref>Order Now</Link>
         </div>
       </div>
 
@@ -137,7 +140,7 @@ const Offers = () => {
           <span>Live Playing Support</span>
         </div>
         <div className="row">
-          <a href="#">Order Now</a>
+        <Link href="/order" passHref>Order Now</Link>
         </div>
       </div>
     </div>

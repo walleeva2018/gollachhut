@@ -9,7 +9,7 @@ export default function TrustedComponent() {
       <VStack spacing={4} margin={4} align="center">
       <Heading
             as="h1"
-            size="2xl"
+            size="xl"
             fontWeight="bold"
             bgGradient="linear(to-r, white, pink.200, cyan.200, orange.200)"
             bgClip="text"
@@ -21,6 +21,15 @@ export default function TrustedComponent() {
 
           <div className="slide">
             <Image src="/images/offer3.jpg" height={80} width={250} alt="Offer 3" />
+          </div>
+          <div className="slide">
+            <Image src="/images/offer4.png" height={80} width={250} alt="Offer 4" />
+          </div>
+          <div className="slide">
+            <Image src="/images/offer5.png" height={80} width={250} alt="Offer 5" />
+          </div>
+           <div className="slide">
+            <Image src="/images/offer3.jpg" height={100} width={250} alt="Offer 3" />
           </div>
           <div className="slide">
             <Image src="/images/offer4.png" height={80} width={250} alt="Offer 4" />

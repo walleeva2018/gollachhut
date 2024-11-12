@@ -17,7 +17,7 @@ export default function NewArrival() {
      <VStack spacing={4} margin={4} align="center">
     <Heading
             as="h1"
-            size="2xl"
+            size="xl"
             fontWeight="bold"
             bgGradient="linear(to-r, white, pink.200, cyan.200, orange.200)"
             bgClip="text"

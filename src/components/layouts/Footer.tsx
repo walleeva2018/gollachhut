@@ -1,6 +1,6 @@
 import { Box, Flex, Link, Text, Image, VStack, HStack, Icon } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import gollachhut from '../../../public/images/gollachhut.jpeg';
+import gollachhut from '../../../public/images/fullGolla.png';
 
 const Footer = () => {
   return (
@@ -9,12 +9,22 @@ const Footer = () => {
       width="full"
       borderTopWidth={1}
       borderColor="gray.400"
-      backgroundImage="url('https://www.shutterstock.com/image-vector/purple-alien-space-planet-game-600nw-2283851021.jpg')"
-      backgroundSize="cover" // Make sure the background image covers the whole footer
+      backgroundImage="/images/footer.jpg"
+      backgroundSize="cover"
       backgroundPosition="center"
-      backgroundRepeat="no-repeat" // Ensure the background image does not repeat
+      backgroundRepeat="no-repeat"
       paddingY={10}
       position="relative"
+      _after={{
+        content: `""`,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 50, 0.6)', // Dark blue overlay for readability
+        zIndex: 0,
+      }}
       marginTop="auto"
     >
       <Flex
@@ -24,69 +34,77 @@ const Footer = () => {
         alignItems="center"
         wrap="wrap"
         paddingX={4}
+        position="relative"
+        zIndex={1} // Ensure content is above the overlay
       >
-        {/* Logo on the left */}
+        {/* Logo */}
         <Box>
-          <Image
-            src={gollachhut.src}
-            alt="Logo"
-            height="150px"
-            width="250px"
-            objectFit="contain"
-          />
+          <Link href="/" color="gray.700" _hover={{ color: 'blue.600' }}> 
+            <Image
+              src={gollachhut.src}
+              alt="Logo"
+              height="120px"
+              width="auto"
+              objectFit="contain"
+            />
+          </Link>
         </Box>
 
-        {/* Quick Links in the middle */}
+        {/* Quick Links */}
         <VStack
           align="center"
           my={4}
-          background="white"
-          borderRadius="lg" // Add rounded corners for a modern look
-          boxShadow="md" // Add subtle shadow to lift the section
-          padding={4} // Add padding for breathing space
+          background="rgba(255, 255, 255, 0.85)"
+          borderRadius="md"
+          boxShadow="lg"
+          padding={5}
         >
-          <Text fontWeight="bold">Quick Links</Text>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Text fontWeight="semibold" color="blue.900" fontSize="lg">Quick Links</Text>
+          <Link href="/" color="gray.700" _hover={{ color: 'blue.600' }}>Home</Link>
+          <Link href="/about" color="gray.700" _hover={{ color: 'blue.600' }}>About</Link>
+          <Link href="/contact" color="gray.700" _hover={{ color: 'blue.600' }}>Contact</Link>
         </VStack>
 
-        {/* Social Links and Contact on the right */}
+        {/* Social Links and Contact */}
         <VStack
-          spacing={2}
+          spacing={3}
           align="flex-end"
           my={4}
-          background="white"
-          borderRadius="lg" // Rounded corners for a modern feel
-          boxShadow="md" // Add shadow for a subtle 3D effect
-          padding={4}
+          background="rgba(255, 255, 255, 0.85)"
+          borderRadius="md"
+          boxShadow="lg"
+          padding={5}
         >
-          <Text fontWeight="bold">Connect with Us</Text>
-          <HStack spacing={4}>
+          <Text fontWeight="semibold" color="blue.900" fontSize="lg">Connect with Us</Text>
+          <HStack spacing={5}>
             <Link href="https://www.facebook.com/profile.php?id=61565797084540&mibextid=ZbWKwL" isExternal>
-              <Icon as={FaFacebook} w={6} h={6} />
+              <Icon as={FaFacebook} w={5} h={5} color="gray.600" _hover={{ color: 'blue.500' }} />
             </Link>
             <Link href="https://x.com/Gollachhuthq?t=R5oVfM9lZhmp4b1dLYILuw&s=09" isExternal>
-              <Icon as={FaTwitter} w={6} h={6} />
+              <Icon as={FaTwitter} w={5} h={5} color="gray.600" _hover={{ color: 'blue.500' }} />
             </Link>
             <Link href="https://www.instagram.com/gollachhutofficial06?igsh=czY1dDVkeWdiZjVy" isExternal>
-              <Icon as={FaInstagram} w={6} h={6} />
+              <Icon as={FaInstagram} w={5} h={5} color="gray.600" _hover={{ color: 'blue.500' }} />
             </Link>
             <Link href="mailto:gollchhutteam@gmail.com">
-              <Icon as={FaEnvelope} w={6} h={6} />
+              <Icon as={FaEnvelope} w={5} h={5} color="gray.600" _hover={{ color: 'blue.500' }} />
             </Link>
           </HStack>
         </VStack>
       </Flex>
 
-      {/* Copyright text */}
-      <Text textAlign="center" marginTop={4} color="white" fontWeight="bold">
+      {/* Copyright */}
+      <Text
+        textAlign="center"
+        marginTop={6}
+        color="gray.300"
+        fontSize="sm"
+        fontWeight="medium"
+        position="relative"
+        zIndex={1}
+      >
         {new Date().getFullYear()} &bull;{' '}
-        <Link
-          href="https://akmalhisyam.my.id"
-          _hover={{ color: 'blue.500' }}
-          isExternal
-        >
+        <Link href="https://akmalhisyam.my.id" _hover={{ color: 'blue.500' }} isExternal>
           All Rights Reserved @GollaChhut
         </Link>
       </Text>

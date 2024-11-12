@@ -1,22 +1,22 @@
 import React from 'react';
 import '../../styles/offers.css'; // Assuming you're storing styles in a separate CSS file
-import { Heading } from '@chakra-ui/react';
+import { Heading , VStack} from '@chakra-ui/react';
 
 const Offers = () => {
   return (
     <div className="container">
-      
+     <VStack spacing={4} margin={4} align="center">
       <Heading
-            as="h1"
-            size="2xl"
-            fontWeight="bold"
-            bgGradient="linear(to-r, green.500, cyan.500, pink.500)"
-
-            margin={4}
-            bgClip="text"  // This clips the background gradient to text
-          >
-            Our Offers
-          </Heading>
+              as="h1"
+              size="2xl"
+              fontWeight="bold"
+              bgGradient="linear(to-r, white, pink.200, cyan.200, orange.200)"
+              bgClip="text"
+              textShadow="0 1px 2px rgba(0, 0, 0, 0.15)" // Optional: slight shadow for better readability
+        >
+              Our Packages
+        </Heading>
+      </VStack>
 
       {/* Box 1 */}
       <div className="box">

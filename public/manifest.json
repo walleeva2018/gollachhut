@@ -1,7 +1,7 @@
 {
-  "name": "Next Chakra Starter",
-  "short_name": "next-chakra-starter",
-  "description": "Next.js + Chakra UI + TypeScript starter template",
+  "name": "Gollachhut",
+  "short_name": "gollachhut",
+  "description": "kids market for toys & development",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",

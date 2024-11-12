@@ -41,7 +41,7 @@ h1 {
                 0 0 0 17px #373636,  0 10px 10px #000;
     cursor: pointer;
     transition: .5s;
-    background: #06a9ac;
+    background: hsl(247 64% 45% / 1);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 150px;

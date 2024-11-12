@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import '../../styles/newarrival.css'
-import { Heading } from '@chakra-ui/react';
+import { Heading , VStack} from '@chakra-ui/react';
 
 export default function NewArrival() {
   const products = [
@@ -14,18 +14,18 @@ export default function NewArrival() {
   return (
     
     <>
-    
+     <VStack spacing={4} margin={4} align="center">
     <Heading
             as="h1"
             size="2xl"
             fontWeight="bold"
-            margin={8}
-            background={'white'}
-            bgClip="text"  // This clips the background gradient to text
-          >
+            bgGradient="linear(to-r, white, pink.200, cyan.200, orange.200)"
+            bgClip="text"
+            textShadow="0 1px 2px rgba(0, 0, 0, 0.15)" // Optional: slight shadow for better readability
+      >
             New Arrivals
           </Heading>
-
+          </VStack>
     <section className="product-grid">
       {products.map((product) => (
         <article key={product.id} className="card">

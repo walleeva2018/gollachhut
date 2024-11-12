@@ -1,8 +1,10 @@
-import { Box, Button, Container, IconButton, Image } from '@chakra-ui/react';
+import { Box, Button, Container, IconButton, Image ,useMediaQuery , Badge} from '@chakra-ui/react';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import Link from 'next/link'; // Import the Next.js Link component
 
 const Header = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const itemCount =2
   return (
     <Box
       as="header"
@@ -32,7 +34,7 @@ const Header = () => {
             <Image
               src="/images/gollachhut.png"
               alt="Logo"
-              height="100px"
+              height="60px"
               width="250px"
               objectFit="contain"
               cursor="pointer" // Add a pointer cursor to indicate it's clickable
@@ -50,14 +52,27 @@ const Header = () => {
         </Box>
 
         {/* Cart Icon */}
-        <Box display="flex" alignItems="center" background={'white'}>
-          <IconButton
-            aria-label="Cart"
-            icon={<RiShoppingCartLine />}
-            variant="ghost"
-            marginRight={2}
-          />
-        </Box>
+        <Box
+      display="flex"
+      alignItems="center"
+      background="white"
+      px={isMobile ? 2 : 4}
+      py={isMobile ? 2 : 3}
+      borderRadius={isMobile ? 'md' : 'lg'}
+      boxShadow={isMobile ? 'sm' : 'md'}
+      position="relative"
+    >
+      <IconButton
+        aria-label="Cart"
+        icon={<RiShoppingCartLine size={isMobile ? 20 : 24} />}
+        variant="ghost"
+        mr={isMobile ? 2 : 4}
+      />
+      {!isMobile && <span>Cart</span>}
+      <Badge colorScheme="red" ml={-2}>
+        {itemCount}
+      </Badge>
+    </Box>
       </Container>
     </Box>
   );

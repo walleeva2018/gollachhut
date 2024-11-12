@@ -1,46 +1,25 @@
-/* __________ L O G O   S L I D E R __________ */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
 .partners-logo-slider {
-    height: 270px;
-    margin: auto;
     overflow: hidden;
-    position: relative;
-    width: auto;
-    padding: 16px 0px;
-
-    .slide-track {
-        display: flex;
-        animation: scroll 40s linear infinite; /* Animate the slider */
-        width: calc(250px * 14); /* Adjust width for both original and duplicate slides */
-    }
-
-    .slide {
-        height: 100px;
-        width: 250px;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease-in-out; /* Smooth transition for hover effect */
-    }
-
-    .slide:hover {
-        filter: grayscale(0%);
-    }
-
-    /* Duplicate slides to ensure smooth repeat */
-    .slide-track::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-    }
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .slide-track {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 80px;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire div without distortion */
+  }
+  

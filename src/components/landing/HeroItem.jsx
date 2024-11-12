@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ele from '../../../public/elephant.svg';
+import ele from '../../../public/images/kids.png';
 import { Heading, Text, VStack, Flex, Box } from '@chakra-ui/react';
 import '../../styles/heroItem.css';
 
@@ -14,24 +14,26 @@ const HeroItem = () => {
             as="h1"
             size="2xl"
             fontWeight="bold"
-            bgGradient="linear(to-r, pink.500, cyan.500, orange.500)"
-            bgClip="text"  // This clips the background gradient to text
+            bgGradient="linear(to-r, white, pink.200, cyan.200, orange.200)"
+            bgClip="text"
+            textShadow="0 1px 2px rgba(0, 0, 0, 0.15)" // Optional: slight shadow for better readability
           >
             Welcome to GollaChhut
           </Heading>
-          
+
           {/* Text with gradient effect */}
           <Text
-            fontSize="xl"
+            fontSize="s"
             fontWeight="medium"
-            bgGradient="linear(to-r, teal.200, green.200)"
+            bgGradient="linear(to-r, white, teal.100, green.100)"
             bgClip="text"
+            textShadow="0 1px 2px rgba(0, 0, 0, 0.1)" // Optional: shadow for contrast
           >
             Where childrens dreams come to dance
           </Text>
         </VStack>
 
-        <Box className="relative w-40 h-40 flex-shrink-0 mt-6 lg:mt-0">
+        <Box className="relative w-30 h-40 flex-shrink-0 mt-6 lg:mt-0">
           <Image
             src={ele}
             alt="Gollachhut Elephant"

@@ -7,7 +7,6 @@ import OfferComponent from '../components/landing/OfferComponent'
 import NewArrival from '@/components/landing/NewArrival';
 
 async function getProducts(): Promise<Product[]> {
-  // In a real application, this would be an API call or database query
   return [
     { id: 1, name: 'Fun Toy 1', price: 19.99, image: '/images/heli.jpeg', tags: ['educational'], color: 'blue' },
     { id: 2, name: 'Cool Gadget 2', price: 29.99, image: '/images/cley.jpg', tags: ['electronic'], color: 'red' },
